@@ -1,6 +1,6 @@
 
 /* 
-  UC2 -> To Calculate Daily Employee Wage
+   UC 3: Add Part-time Employee & Wage
 */
 function getEmployeeHours() {
   let empCheck = Math.floor(Math.random() * 3); // 0,1,2
@@ -11,7 +11,12 @@ function getEmployeeHours() {
   }
 }
 
-let wagePerHour = 20;
-let hours = getEmployeeHours();
-let dailyWage = hours * wagePerHour;
-console.log("Daily Wage:", dailyWage);
+let dailyWages = [];
+
+for(let i=0; i<5; i++){  // simulate 5 days
+    let wagePerHour = 20;
+    let hours = getEmployeeHours();
+    let wage = hours * wagePerHour;
+    dailyWages.push(wage);
+}
+console.log("Daily Wage:", dailyWages);
