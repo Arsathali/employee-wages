@@ -1,7 +1,7 @@
 
-
+/* UC1 -> Checking Employee is Present or Absent*/
 function isEmployeeIsPresent(){
-    
+
     let empCheck = Math.floor(Math.random(0,2)*2);
 
     if(empCheck === 1){
@@ -10,5 +10,6 @@ function isEmployeeIsPresent(){
         return "Employee is Absent"
     }
 }
+
 
 console.log(isEmployeeIsPresent());
