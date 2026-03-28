@@ -1,6 +1,6 @@
 
 /* 
-   UC 4: Calculating Employee Wage Using Switch
+   UC 5: Calculating Wages for a Month
 */
 function getEmployeeHours() {
   let empCheck = Math.floor(Math.random() * 3); // 0,1,2
@@ -19,4 +19,8 @@ for(let i=0; i<5; i++){  // simulate 5 days
     let wage = hours * wagePerHour;
     dailyWages.push(wage);
 }
+
+let totalWages = dailyWages.reduce((acc,curr) => acc+curr, 0);
+
 console.log("Daily Wage:", dailyWages);
+console.log(totalWages);
