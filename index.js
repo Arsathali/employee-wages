@@ -1,14 +1,17 @@
 
-
-function isEmployeeIsPresent(){
-    
-    let empCheck = Math.floor(Math.random(0,2)*2);
-
-    if(empCheck === 1){
-        return "Employee is Present";
-    }else{
-        return "Employee is Absent"
-    }
+/* 
+  UC2 -> To Calculate Daily Employee Wage
+*/
+function getEmployeeHours() {
+  let empCheck = Math.floor(Math.random() * 3); // 0,1,2
+  switch(empCheck) {
+    case 0: return 0; // Absent
+    case 1: return 4; // Part-time
+    case 2: return 8; // Full-time
+  }
 }
 
-console.log(isEmployeeIsPresent());
+let wagePerHour = 20;
+let hours = getEmployeeHours();
+let dailyWage = hours * wagePerHour;
+console.log("Daily Wage:", dailyWage);
