@@ -1,6 +1,6 @@
 
 /* 
-   UC 3: Add Part-time Employee & Wage
+   UC 4: Calculating Employee Wage Using Switch
 */
 function getEmployeeHours() {
   let empCheck = Math.floor(Math.random() * 3); // 0,1,2
