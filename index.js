@@ -1,6 +1,6 @@
 
 /* 
-  UC 8: Compute Employee Wage for Multiple Companies
+  UC 9: Ability to Save Total Wage for Each Company
 */
 class CompanyEmpWage {
 
@@ -55,5 +55,9 @@ companyMap.set("Tata", new CompanyEmpWage("Tata", 30, 18, 90));
 
 companyMap.forEach((companyObj, companyName) => {
   companyObj.computeWage();
-  companyObj.printWage();
+});
+
+console.log("\n--- Total Wages by Company ---");
+companyMap.forEach((companyObj, name) => {
+  console.log(`${name}: ${companyObj.totalWage}`);
 });
