@@ -1,8 +1,8 @@
 
 /* 
-   UC 7: Refactor to Class Method
+  UC 8: Compute Employee Wage for Multiple Companies
 */
-class EmployeeWage {
+class CompanyEmpWage {
 
   constructor(company, wagePerHour, maxDays, maxHours) {
     this.company = company;
@@ -31,7 +31,7 @@ class EmployeeWage {
   }
 
   printWage() {
-    console.log(`Company: ${this.company}`);
+    console.log(`\nCompany: ${this.company}`);
     console.log("Daily Wages:", this.dailyWage);
     console.log("Total Wage:", this.totalWage);
   }
@@ -46,6 +46,14 @@ function getEmployeeHours() {
   }
 }
 
-let emp = new EmployeeWage("DMart", 20, 20, 100);
-emp.computeWage();
-emp.printWage();
+let companyMap = new Map();
+
+// Add companies
+companyMap.set("DMart", new CompanyEmpWage("DMart", 20, 20, 100));
+companyMap.set("Reliance", new CompanyEmpWage("Reliance", 25, 22, 120));
+companyMap.set("Tata", new CompanyEmpWage("Tata", 30, 18, 90));
+
+companyMap.forEach((companyObj, companyName) => {
+  companyObj.computeWage();
+  companyObj.printWage();
+});
